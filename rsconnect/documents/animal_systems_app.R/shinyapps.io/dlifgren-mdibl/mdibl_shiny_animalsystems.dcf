@@ -1,0 +1,13 @@
+name: mdibl_shiny_animalsystems
+title: mdibl_shiny_animalsystems
+username:
+account: dlifgren-mdibl
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4461169
+bundleId: 4934798
+url: https://dlifgren-mdibl.shinyapps.io/mdibl_shiny_animalsystems/
+when: 1629251325.52022
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: save.R|systems
