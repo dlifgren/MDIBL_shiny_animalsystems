@@ -63,8 +63,8 @@ ui <- fluidPage(
       #date range input
       dateRangeInput('dateRange',
                      label = 'Choose date range',
-                     start = Sys.Date() - 7, 
-                     end = Sys.Date() + 1
+                     start = min(systems$zfish_main$date),
+                     end = max(systems$zfish_main$date)
       ),
       
       #checkbox for average
@@ -140,7 +140,6 @@ server <- function(input, output, session) {
     if(min(outlier()$date <= input$dateRange[1])){
       validate("No data for selected date range. Choose an earlier date.")
     }
-    
     p = ggplot(outlier(), aes(x = .data$date, y = .data[[input$param]], group = system, 
                               text = paste("System:", system,
                                            "<br>", "Date:", 
